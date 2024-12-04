@@ -6,13 +6,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Unlock&display=swap');
 
-header{
-    display: flex;
-    justify-content: space-around;
-    background-color: #ff81e5;
-background-image: linear-gradient(0deg, #fdc7f2 0%, #fadef5 46%, #ffffff 100%);
-
-
+header {
+  display: flex;
+  justify-content: center; /* Centra los elementos en el header */
+  align-items: center; /* Alinea los elementos verticalmente */
+  background-color: #ff81e5;
+  background-image: linear-gradient(0deg, #fdc7f2 0%, #fadef5 46%, #ffffff 100%);
+  padding: 1rem 0; /* Agrega algo de espacio arriba y abajo */
 }
 
 
@@ -21,6 +21,8 @@ background-image: linear-gradient(0deg, #fdc7f2 0%, #fadef5 46%, #ffffff 100%);
 .nav-links {
   display: flex;
   list-style: none;
+  justify-content: center; /* Centra los links de navegación */
+  align-items: center; /* Alinea verticalmente */
 }
 
 .nav-links li {
@@ -60,12 +62,11 @@ background-image: linear-gradient(0deg, #fdc7f2 0%, #fadef5 46%, #ffffff 100%);
 
 
 .navbar {
-display: flex;
-margin: 2rem;
-text-transform: uppercase;
-align-items: center;
-height: 6rem;
-
+  display: flex;
+  justify-content: center; /* Centra los elementos dentro de la navbar */
+  align-items: center; /* Alinea los elementos verticalmente */
+  height: 6rem;
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
 }
 .search-box{
     width: fit-content;
@@ -124,27 +125,28 @@ height: 6rem;
   
   
 
-.navbar img{
-height: 12rem;
-width:12rem;
+  .navbar img {
+    height: 12rem;
+    width: 12rem;
+    margin-right: 2rem; /* Asegura que la imagen no toque el texto */
 }
 .navbar a {
-    margin: 2rem;
-    font-size: 1.3rem;
-    font-weight: 900;
-    text-decoration: none;
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
+  margin: 0 1rem; /* Ajusta el espaciado entre los enlaces */
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
 }
 
 .navbar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px; /* Ajusta la distancia de la línea respecto al texto */
-    width: 0;
-    height: 4px;
-    background-color: red;
-    transition: width 300ms ease-in; /* Duración de la transición */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 4px;
+  background-color: red;
+  transition: width 300ms ease-in;
 }
 
 .navbar a:hover::after {
