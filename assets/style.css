@@ -312,9 +312,9 @@ h2{
   font-size: 3rem;
   font-weight: 900;
   font-family: "Unlock", serif;
-  background-color: #f579c7;
   padding-bottom: 2rem;
   padding-top: 2rem;
+  color: #d639a0;
 
 }
 
@@ -571,4 +571,72 @@ border-radius: 3rem;
 .success-message:not(.hidden) {
   display: block;
   animation: fadeInOut 3s ease-in-out;
+}
+
+
+/* boton wp */
+
+ /* Estilo del botón flotante */
+ .whatsapp-btn {
+  position: fixed;
+  bottom: 20px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde la parte derecha */
+  background-color: #25D366; /* Color verde de WhatsApp */
+  border-radius: 50%; /* Botón circular */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  z-index: 1000; /* Siempre visible */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.whatsapp-btn img {
+  width: 35px; /* Tamaño del icono */
+  height: 35px;
+}
+
+/* comida de perros */
+
+.carousel-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8c1e9;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Cambia el ancho máximo del carrusel */
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  width: 80%; /* Ajusta el ancho de las imágenes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 10px;
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+#perros{
+  color: #d639a0;
+  font-size: 2rem;
 }

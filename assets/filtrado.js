@@ -41,3 +41,41 @@ function renderCards() {
 }
 
 document.addEventListener('DOMContentLoaded', renderCards);
+
+/* comida de perros */
+
+const track = document.querySelector('.carousel-track');
+const items = Array.from(track.children);
+const nextButton = document.createElement('button');
+const prevButton = document.createElement('button');
+
+nextButton.textContent = '→';
+prevButton.textContent = '←';
+nextButton.classList.add('carousel-button');
+prevButton.classList.add('carousel-button');
+
+document.querySelector('.carousel-section').appendChild(prevButton);
+document.querySelector('.carousel-section').appendChild(nextButton);
+
+let currentIndex = 0;
+
+function updateCarousel() {
+    const amountToMove = -currentIndex * 100;
+    track.style.transform = `translateX(${amountToMove}%)`;
+}
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+});
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+});
+
+// Auto-scroll
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+}, 3000); // Cambia cada 3 segundos
