@@ -1,0 +1,77 @@
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ocultar el menú de navegación */
+        flex-direction: column; /* Cambiar a columna */
+        position: absolute; /* Posicionamiento absoluto */
+        top: 60px; /* Debajo del header */
+        left: 0; /* Alineado a la izquierda */
+        background-color: #ff81e5; /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 100; /* Asegurarse de que esté encima */
+    }
+  
+    .nav-links.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+  
+    .menu-toggle {
+        display: block; /* Mostrar el botón de menú hamburguesa */
+    }
+
+
+.descripcion-nosotros p {
+    display: none;
+}
+.descripcion-nosotros img{
+    padding: 2rem;
+}
+.contactanos img{
+    width: 100%;
+  
+}
+.contactanos {
+    flex-direction: column;
+   margin: auto;
+    align-items: center;
+}
+
+  }
+
+  @media (max-width:700px) {
+    .nav-links {
+        display: none; /* Ocultar el menú de navegación */
+        flex-direction: column; /* Cambiar a columna */
+        position: absolute; /* Posicionamiento absoluto */
+        top: 60px; /* Debajo del header */
+        left: 0; /* Alineado a la izquierda */
+        background-color: #ff81e5; /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 100; /* Asegurarse de que esté encima */
+    }
+  
+    .nav-links.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+  
+    .menu-toggle {
+        display: block; /* Mostrar el botón de menú hamburguesa */
+    }
+
+
+.descripcion-nosotros p {
+    display: none;
+}
+.descripcion-nosotros img{
+    display: none;
+}
+.contactanos img{
+    width: 100%;
+  
+}
+.contactanos {
+    flex-direction: column;
+   margin: auto;
+    align-items: center;
+}
+  }
