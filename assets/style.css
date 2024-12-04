@@ -107,6 +107,7 @@ header {
     color:#ffffff ;
     background-color:transparent;
     pointer-events: painted;  
+    margin: auto;
   }
   .btn-search:focus ~ .input-search{
     width: 300px;
