@@ -8,21 +8,20 @@
 
 header {
   display: flex;
-  justify-content: center; /* Centra los elementos en el header */
-  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: center; 
+  align-items: center; 
   background-color: #ff81e5;
   background-image: linear-gradient(0deg, #fdc7f2 0%, #fadef5 46%, #ffffff 100%);
-  padding: 1rem 0; /* Agrega algo de espacio arriba y abajo */
+  padding: 1rem 0; 
 }
 
 
-/* menu burguer */
-/* Estilos para el menú hamburguesa */
+
 .nav-links {
   display: flex;
   list-style: none;
-  justify-content: center; /* Centra los links de navegación */
-  align-items: center; /* Alinea verticalmente */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .nav-links li {
@@ -30,43 +29,43 @@ header {
 }
 
 .menu-toggle {
-  display: none; /* Ocultar por defecto */
+  display: none; 
   background: none;
   border: none;
   cursor: pointer;
   font-size: 2rem;
-  color: #fff; /* Color del icono */
+  color: #fff; 
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
   .nav-links {
-      display: none; /* Ocultar el menú de navegación */
-      flex-direction: column; /* Cambiar a columna */
-      position: absolute; /* Posicionamiento absoluto */
-      top: 60px; /* Debajo del header */
-      left: 0; /* Alineado a la izquierda */
-      background-color: #ff81e5; /* Fondo del menú */
-      width: 100%; /* Ancho completo */
-      z-index: 100; /* Asegurarse de que esté encima */
+      display: none; 
+      flex-direction: column; 
+      position: absolute; 
+      top: 60px;
+      left: 0; 
+      background-color: #ff81e5; 
+      width: 100%; 
+      z-index: 100; 
   }
 
   .nav-links.active {
-      display: flex; /* Mostrar el menú cuando está activo */
+      display: flex; 
   }
 
   .menu-toggle {
-      display: block; /* Mostrar el botón de menú hamburguesa */
+      display: block; 
   }
 }
 
 
 .navbar {
   display: flex;
-  justify-content: center; /* Centra los elementos dentro de la navbar */
-  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: center; 
+  align-items: center; 
   height: 6rem;
-  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+  width: 100%; 
 }
 .search-box{
     width: fit-content;
@@ -129,10 +128,10 @@ header {
   .navbar img {
     height: 12rem;
     width: 12rem;
-    margin-right: 2rem; /* Asegura que la imagen no toque el texto */
+    margin-right: 2rem; 
 }
 .navbar a {
-  margin: 0 1rem; /* Ajusta el espaciado entre los enlaces */
+  margin: 0 1rem; 
   font-size: 1.3rem;
   font-weight: 900;
   text-decoration: none;
@@ -151,7 +150,7 @@ header {
 }
 
 .navbar a:hover::after {
-    width: 100%; /* La línea se expande a todo el ancho del enlace al hacer hover */
+    width: 100%; 
 }
 
 .banner h1,p{
@@ -167,14 +166,13 @@ header {
     font-size: 2.5rem;
     font-weight: 800;
     background-image: url(/assets/img/freepik__candid-image-photography-natural-textures-highly-r__33812.png) ;
-    background-size: cover; /* Para que la imagen de fondo cubra todo el espacio */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 60vh; /* Haz que el banner ocupe toda la altura de la ventana */
-    filter: brightness(0.8); /* Cambia el valor de brillo aquí (1 es el valor normal) */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 60vh;
+    filter: brightness(0.8); 
 }
 
-/* cards */
 
 body {
   font-family: Arial, sans-serif;
@@ -296,7 +294,6 @@ border-color: #ef48b4;
   font-size: 1.8rem;
   font-family: "Unlock", serif;
 
-  /* margin: 0.5rem 0; */
 }
 
 .card p {
@@ -351,7 +348,7 @@ padding: 1rem;
 }
 
 .footer-content li a {
-  text-decoration: none; /* Elimina el subrayado */
+  text-decoration: none; 
 }
 .footer-content li a:hover{
   color: #ef48b4;
@@ -367,35 +364,34 @@ background-color: #f6a9db;
 
 }
 
-/* Asegura que el formulario y sus elementos se apilen */
 #contact-form {
   display: flex;
-  flex-direction: column; /* Organiza los elementos en columna */
-  gap: 15px; /* Espacio entre los elementos */
-  max-width: 400px; /* Ancho máximo del formulario */
-  margin: 0 auto; /* Centra el formulario */
+  flex-direction: column; 
+  gap: 15px; 
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 #contact-form input,
 #contact-form textarea,
 #contact-form button {
-  width: 100%; /* Cada elemento ocupa el 100% del ancho del formulario */
-  padding: 10px; /* Espaciado interno */
-  font-size: 1rem; /* Tamaño de fuente */
-  border: 1px solid #ccc; /* Bordes */
-  border-radius: 5px; /* Bordes redondeados */
-  box-sizing: border-box; /* Incluye padding y borde dentro del ancho */
+  width: 100%; 
+  padding: 10px; 
+  font-size: 1rem; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
 }
 
 #contact-form button {
-  background-color: #007BFF; /* Color del botón */
+  background-color: #007BFF; 
   color: white;
   border: none;
   cursor: pointer;
 }
 
 #contact-form button:hover {
-  background-color: #0056b3; /* Color al pasar el ratón */
+  background-color: #0056b3; 
 }
 
 
@@ -407,14 +403,14 @@ background-color: #f6a9db;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgba(241, 84, 207, 0.473); /* Fondo blanco semi-transparente */
+  background: rgba(241, 84, 207, 0.473); 
   margin: 1rem;
   padding: 5rem;
   border-radius: 2rem;
   gap: .2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
-  -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
 }
 .maps {
   padding-top: 1.3rem;
@@ -429,8 +425,7 @@ background-color: #f6a9db;
   padding: .2rem;
   margin-bottom: 1rem;
   font-size: 1rem;
-  border: 2px solid #d639a0; /* Cambiado a border para que se vea mejor */
-  background-color: rgba(255, 211, 235, 0.8); /* Fondo semi-transparente */
+  border: 2px solid #d639a0; 
   font-weight: 800;
   font-family: "Unlock", serif;
 }
@@ -448,27 +443,27 @@ background-color: #f6a9db;
   display: none;
   position: fixed;
   top: 0;
-  right: 0; /* Cambiado de left a right */
-  width: 300px; /* Ancho del carrito */
-  height: 100%; /* Altura completa */
-  background-color: #fdbde6; /* Fondo blanco con un poco de transparencia */
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
-  transition: transform 0.3s ease; /* Transición suave */
-  transform: translateX(100%); /* Comienza fuera de la vista */
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  right: 0; 
+  width: 300px; 
+  height: 100%; 
+  background-color: #fdbde6; 
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease; 
+  transform: translateX(100%); 
+  z-index: 1000; 
 }
 
 .modal:not(.hidden) {
   display: block;
-  transform: translateX(0); /* Mueve el carrito a la vista */
+  transform: translateX(0); 
 }
 
 .modal-content {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  max-height: 80vh; /* Altura máxima del modal */
-  overflow-y: auto; /* Habilitar desplazamiento vertical */
+  max-height: 80vh; 
+  overflow-y: auto; 
 }
 .modal-content h2{
 color: #f65bad;
@@ -485,37 +480,37 @@ background-color: #fdbde6;
 
 
 button {
-  background-color: #ef48b4; /* Color de fondo para los botones */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  padding: 10px ; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  transition:  0.3s; /* Transición para el color de fondo */
+  background-color: #ef48b4; 
+  color: white; 
+  border: none; 
+  padding: 10px ; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition:  0.3s; 
   font-size: 1.5rem;
   border-radius: 3rem;
   font-family: "Unlock", serif;
 }
 
 button:hover {
-  background-color: #d639a0; /* Color más oscuro al pasar el ratón */
+  background-color: #d639a0; 
 }
 
 
 .close-button {
-  background: none; /* Sin fondo */
-  border: none; /* Sin borde */
-  font-size: 2rem; /* Tamaño de la fuente */
-  color: #ff6b6b; /* Color de la X */
-  position: absolute; /* Posicionamiento absoluto */
-  top: 10px; /* Espaciado desde la parte superior */
-  right: 10px; /* Espaciado desde la derecha */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  background: none; 
+  border: none; 
+  font-size: 2rem; 
+  color: #ff6b6b; 
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  cursor: pointer; 
 }
 
 .close-button:hover {
   color: #ff4d4d; 
-  border-radius: 100%;/* Color más oscuro al pasar el ratón */
+  border-radius: 100%;
 }
 
 .modal.hidden {
@@ -559,9 +554,9 @@ margin-right: 2.2rem;
 border-radius: 3rem;
 }
 #cart-items {
-  list-style-type: none; /* Eliminar los estilos de lista */
-  padding: 0; /* Eliminar el padding */
-  margin: 1rem 0; /* Margen alrededor de la lista */
+  list-style-type: none; 
+  padding: 0; 
+  margin: 1rem 0; 
 }
 #cart-count{
   background-color: #ff81e5;
@@ -590,7 +585,7 @@ border-radius: 3rem;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #4caf50; /* Color verde para éxito */
+  background-color: #4caf50;
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
@@ -611,32 +606,30 @@ border-radius: 3rem;
 }
 
 
-/* boton wp */
 
- /* Estilo del botón flotante */
  .whatsapp-btn {
   position: fixed;
-  bottom: 20px; /* Distancia desde la parte inferior */
-  right: 20px; /* Distancia desde la parte derecha */
-  background-color: #25D366; /* Color verde de WhatsApp */
-  border-radius: 50%; /* Botón circular */
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #25D366; 
+  border-radius: 50%; 
   width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-  z-index: 1000; /* Siempre visible */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .whatsapp-btn:hover {
-  transform: scale(1.1); /* Efecto de agrandamiento */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  transform: scale(1.1); 
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .whatsapp-btn img {
-  width: 35px; /* Tamaño del icono */
+  width: 35px; 
   height: 35px;
 }
 
@@ -652,7 +645,7 @@ border-radius: 3rem;
   overflow: hidden;
   position: relative;
   width: 100%;
-  max-width: 400px; /* Cambia el ancho máximo del carrusel */
+  max-width: 400px; 
   margin: auto;
 }
 
@@ -667,10 +660,10 @@ border-radius: 3rem;
 }
 
 .carousel img {
-  width: 80%; /* Ajusta el ancho de las imágenes */
-  height: auto; /* Mantiene la proporción de las imágenes */
+  width: 80%; 
+  height: auto; 
   border-radius: 10px;
-  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+  margin: 0 auto; 
 }
 
 #perros{
