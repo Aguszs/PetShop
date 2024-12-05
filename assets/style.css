@@ -366,6 +366,42 @@ margin: auto;
 background-color: #f6a9db;
 
 }
+
+/* Asegura que el formulario y sus elementos se apilen */
+#contact-form {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna */
+  gap: 15px; /* Espacio entre los elementos */
+  max-width: 400px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centra el formulario */
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+  width: 100%; /* Cada elemento ocupa el 100% del ancho del formulario */
+  padding: 10px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho */
+}
+
+#contact-form button {
+  background-color: #007BFF; /* Color del botón */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+
+
+
+
 .forms {
   display: flex;
   align-items: center;

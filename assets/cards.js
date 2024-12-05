@@ -314,6 +314,3 @@ document.getElementById('loginButton').addEventListener('click', function () {
     }
 });
 
-/* filtrar por clase */
-
-
