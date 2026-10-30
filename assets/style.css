@@ -339,7 +339,7 @@ padding: 1rem;
   margin: auto;
   
 }
-.footer-content ul, li {
+.footer-content ul, .footer-content li {
   display: flex;
   margin: auto;
   font-size: 1.5rem;
