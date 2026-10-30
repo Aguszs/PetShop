@@ -157,14 +157,6 @@ const finalizeButton = document.getElementById('finalize-purchase');
 const closeCartButton = document.getElementById('close-cart');
 const viewCartButton = document.getElementById('view-cart');
 
-// Función para actualizar el contador y el total del carrito
-function updateCart() {
-    cartCount.textContent = cart.length;
-    let total = cart.reduce((sum, item) => sum + item.precio, 0);
-    cartTotal.textContent = total;
-    renderCartItems();
-}
-
 // Renderiza los elementos dentro del carrito
 function renderCartItems() {
     cartItems.innerHTML = '';
@@ -206,30 +198,6 @@ closeCartButton.addEventListener('click', () => {
 
 
 
-// Modificar la función renderCards para añadir el botón "Agregar al carrito"
-function renderCards() {
-    const container = document.getElementById('cards-container');
-    cardData.forEach(data => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-
-        card.innerHTML = `
-            <img src="${data.imageUrl}" alt="${data.title}">
-            <h3>${data.title}</h3>
-            <p>Precio: $${data.precio}</p>
-            <button class="add-to-cart">Agregar al carrito</button>
-        `;
-
-        const addToCartButton = card.querySelector('.add-to-cart');
-        addToCartButton.addEventListener('click', () => addToCart(data));
-
-        container.appendChild(card);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', renderCards);
-
-
 // Mostrar mensaje de error
 function showError(message) {
     const errorMessage = document.getElementById('error-message');
@@ -263,54 +231,29 @@ finalizeButton.addEventListener('click', () => {
     }
 });
 function updateCart() {
-    cartCount.textContent = cart.length;
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
     let total = cart.reduce((sum, item) => sum + (item.precio * item.quantity), 0); // Calcular total considerando la cantidad
     cartTotal.textContent = total.toFixed(2); // Mostrar total con dos decimales
     renderCartItems();
 }
 
-/* menu burguer */
-
+/* Menú de navegación */
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); // Alternar la clase activa
-});
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+        menuToggle.setAttribute('aria-label', isExpanded ? 'Abrir menú' : 'Cerrar menú');
+        navLinks.classList.toggle('active', !isExpanded);
+    });
 
-document.getElementById('signupButton').addEventListener('click', function () {
-    const username = document.getElementById('signupUsername').value.trim();
-    const email = document.getElementById('signupEmail').value.trim();
-    const password = document.getElementById('signupPassword').value.trim();
-
-    if (!username || !email || !password) {
-        alert('Por favor completa todos los campos del registro.');
-        return;
-    }
-
-    // Guardar los datos en localStorage
-    localStorage.setItem('registeredEmail', email);
-    localStorage.setItem('registeredPassword', password);
-    alert('Registro exitoso. Ahora inicia sesión.');
-});
-
-// Validación del formulario de inicio de sesión
-document.getElementById('loginButton').addEventListener('click', function () {
-    const registeredEmail = localStorage.getItem('registeredEmail');
-    const registeredPassword = localStorage.getItem('registeredPassword');
-
-    const loginEmail = document.getElementById('loginEmail').value.trim();
-    const loginPassword = document.getElementById('loginPassword').value.trim();
-
-    if (!loginEmail || !loginPassword) {
-        alert('Por favor completa todos los campos del login.');
-        return;
-    }
-
-    if (loginEmail === registeredEmail && loginPassword === registeredPassword) {
-        alert('Bienvenido al sistema!');
-    } else {
-        alert('Error: Email o contraseña incorrectos.');
-    }
-});
-
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Abrir menú');
+        });
+    });
+}
