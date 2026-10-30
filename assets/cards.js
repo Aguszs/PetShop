@@ -219,37 +219,17 @@ function showSuccess(message) {
     }, 3000); // El mensaje desaparece después de 3 segundos
 }
 
-// Preparar el pedido y abrir WhatsApp para coordinar pago y entrega.
+// Confirmar la compra y mostrar el resultado.
 finalizeButton.addEventListener('click', () => {
     if (cart.length === 0) {
         showError('Agregá al menos un producto para continuar.');
         return;
     }
 
-    const orderLines = cart.map(item =>
-        '- ' + item.title + ' x ' + item.quantity + ' — $' + (item.precio * item.quantity)
-    );
-    const total = cart.reduce((sum, item) => sum + item.precio * item.quantity, 0);
-    const message = [
-        'Hola, quiero hacer este pedido:',
-        ...orderLines,
-        '',
-        'Total: $' + total,
-        '¿Podemos coordinar el pago y la entrega?'
-    ].join('\n');
-    const whatsappUrl = 'https://wa.me/3513428951?text=' + encodeURIComponent(message);
-    const orderWindow = window.open(whatsappUrl, '_blank');
-
-    if (!orderWindow) {
-        showError('Permití las ventanas emergentes para abrir WhatsApp y enviar tu pedido.');
-        return;
-    }
-
-    orderWindow.opener = null;
-    showSuccess('¡Pedido preparado! En WhatsApp coordinás el pago y la entrega.');
     cart = [];
     updateCart();
     cartModal.classList.add('hidden');
+    showSuccess('¡Compra realizada con éxito!');
 });
 function updateCart() {
     cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
