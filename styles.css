@@ -209,16 +209,11 @@ button {
     width: 100%;
 }
 
-.login-note,
 .back-link {
     flex-basis: 100%;
     text-align: center;
 }
 
-.login-note {
-    margin: .5rem 0;
-    color: #555;
-}
 
 .back-link {
     color: #a92361;
