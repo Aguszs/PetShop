@@ -7,11 +7,11 @@ Tienda online de productos para mascotas hecha con **HTML, CSS y JavaScript puro
 ## Funcionalidades
 
 - **Catálogo dinámico:** los productos se guardan en un array de objetos y se renderizan con JavaScript (manipulación del DOM).
-- **Filtro por categoría:** cuchas, ropa, juguetes y más.
+- **Catálogo:** búsqueda por nombre y filtros por categoría (cuchas, ropa y juguetes).
 - **Carrito de compras:** agregar productos, sumar cantidades, eliminar, total calculado y validación al finalizar la compra.
-- **Registro e inicio de sesión simulados:** los datos se guardan en `localStorage` (es una simulación para practicar; no es autenticación real).
+- **Registro e inicio de sesión de práctica:** usa `localStorage` en este navegador; no es una cuenta real ni un sistema de autenticación para producción.
 - **Formulario de contacto:** envío de mensajes por email con [EmailJS](https://www.emailjs.com/).
-- **Carrusel** con avance automático y botones, **menú hamburguesa** y diseño **responsive** (media queries).
+- **Carrusel** con controles, **menú hamburguesa** y diseño adaptable a celular.
 
 ## Tecnologías
 
