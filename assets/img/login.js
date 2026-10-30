@@ -1,5 +1,8 @@
 // Registro
 document.getElementById('registerButton').addEventListener('click', function () {
+    const registerForm = document.getElementById('registerForm');
+    if (!registerForm.reportValidity()) return;
+
     const username = document.getElementById('registerUsername').value.trim();
     const email = document.getElementById('registerEmail').value.trim();
     const password = document.getElementById('registerPassword').value.trim();
@@ -19,6 +22,9 @@ document.getElementById('registerButton').addEventListener('click', function () 
 
 // Login
 document.getElementById('loginButton').addEventListener('click', function () {
+    const loginForm = document.getElementById('loginForm');
+    if (!loginForm.reportValidity()) return;
+
     const storedEmail = localStorage.getItem('email');
     const storedPassword = localStorage.getItem('password');
 
