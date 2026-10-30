@@ -120,3 +120,61 @@ body::after {
     opacity: 0.1;
     z-index: -1;
 }
+
+/* Adaptación de los formularios de acceso a pantallas pequeñas */
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    height: auto;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+.container {
+    width: min(100%, 900px);
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container form {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+input {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: .75rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: .5rem;
+    }
+
+    #registerForm,
+    #loginForm {
+        width: 100%;
+        margin: 0 0 1rem;
+        padding: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
