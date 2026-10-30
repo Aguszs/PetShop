@@ -35,7 +35,7 @@
             </div>
         </div>
     </header>
-    <section>
+    <div class="ui-notices">
         <div id="cart-modal" class="modal hidden">
             <div class="modal-content">
                 <button id="close-cart" class="close-button">✖</button>
@@ -49,20 +49,19 @@
         </div>
         <div id="error-message" class="error-message hidden">Por favor, agregar producto</div>
         <div id="success-message" class="success-message hidden">¡Compra realizada con éxito!</div>
-    </section>
+    </div>
     
     <section>
         <div class="banner" id="inicio">
             <h1>¡Bienvenidos a Entre Amigos!</h1>
-            <br>
-            <p>Cuchas, ropa y juguetes para acompañar a quienes hacen de cada día algo especial.</p>
+            <a class="hero-button" href="#productos">Ver productos</a>
         </div>
     </section>
 
 
     <h2 id="nosotros">Sobre nosotros</h2>
     <div class="descripcion-nosotros">
-        <img src="/assets/img/c3ebc78e-c518-4e3b-a4c5-fa63b357f547.png" alt="" class="dogo">
+        <img src="/assets/img/c3ebc78e-c518-4e3b-a4c5-fa63b357f547.png" alt="Perro descansando" class="dogo" loading="lazy">
         <p>En nuestra tienda, sabemos que tus mascotas no son solo animales, ¡son parte de tu familia! Por eso, nos dedicamos a ofrecerles lo mejor en cuidado, alimentación y accesorios, con todo el amor y dedicación que se merecen.</p>
     </div>
     
@@ -86,9 +85,12 @@
         <div class="forms">
             <h3>Contáctanos</h3>
             <form id="contact-form">
-                <input type="text" id="user-name" name="user_name" placeholder="Ingrese su nombre" required>
-                <input type="email" id="user-email" name="user_email" placeholder="Ingrese su correo" required>
-                <textarea id="user-message" name="user_message" placeholder="Escribanos su consulta" required></textarea>
+                <label class="sr-only" for="user-name">Nombre</label>
+                <input type="text" id="user-name" name="user_name" placeholder="Tu nombre" autocomplete="name" required>
+                <label class="sr-only" for="user-email">Correo electrónico</label>
+                <input type="email" id="user-email" name="user_email" placeholder="Tu correo electrónico" autocomplete="email" required>
+                <label class="sr-only" for="user-message">Consulta</label>
+                <textarea id="user-message" name="user_message" placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
             <p id="form-response" class="hidden"></p>
@@ -116,19 +118,19 @@
     <div class="carousel">
         <div class="carousel-track">
             <div class="carousel-item">
-                <img src="/assets/img/Captura de pantalla 2024-12-04 115537.png" alt="Marca 1">
+                <img src="/assets/img/Captura de pantalla 2024-12-04 115537.png" alt="Alimento para perros, presentación 1" loading="lazy">
             </div>
             <div class="carousel-item">
-                <img src="/assets/img/Captura de pantalla 2024-12-04 115623.png" alt="Marca 2">
+                <img src="/assets/img/Captura de pantalla 2024-12-04 115623.png" alt="Alimento para perros, presentación 2" loading="lazy">
             </div>
             <div class="carousel-item">
-                <img src="/assets/img/Captura de pantalla 2024-12-04 115708.png" alt="Marca 3">
+                <img src="/assets/img/Captura de pantalla 2024-12-04 115708.png" alt="Alimento para perros, presentación 3" loading="lazy">
             </div>
             <div class="carousel-item">
-                <img src="/assets/img/Captura de pantalla 2024-12-04 115749.png" alt="Marca 4">
+                <img src="/assets/img/Captura de pantalla 2024-12-04 115749.png" alt="Alimento para perros, presentación 4" loading="lazy">
             </div>
             <div class="carousel-item">
-                <img src="/assets/img/Captura de pantalla 2024-12-04 120015.png" alt="Marca 5">
+                <img src="/assets/img/Captura de pantalla 2024-12-04 120015.png" alt="Alimento para perros, presentación 5" loading="lazy">
             </div>
         </div>
     </div>
