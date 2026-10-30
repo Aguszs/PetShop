@@ -1,58 +1,54 @@
-// Registro
-document.getElementById('registerButton').addEventListener('click', function () {
-    const registerForm = document.getElementById('registerForm');
+// Acceso de demostración: los datos viven solo en memoria durante esta visita.
+let demoAccount = null;
+let notificationTimer;
+
+const registerForm = document.getElementById('registerForm');
+const loginForm = document.getElementById('loginForm');
+const notification = document.getElementById('notification');
+
+document.getElementById('registerButton').addEventListener('click', () => {
     if (!registerForm.reportValidity()) return;
 
     const username = document.getElementById('registerUsername').value.trim();
     const email = document.getElementById('registerEmail').value.trim();
-    const password = document.getElementById('registerPassword').value.trim();
+    const password = document.getElementById('registerPassword').value;
 
     if (!username || !email || !password) {
-        showNotification('Por favor, completa todos los campos.', 'error');
+        showNotification('Completá todos los campos para continuar.', 'error');
         return;
     }
 
-    // Guardar datos en LocalStorage
-    localStorage.setItem('username', username);
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
-
-    showNotification('Registro exitoso. Ahora puedes iniciar sesión.', 'success');
+    demoAccount = { email, password };
+    showNotification('Cuenta de prueba creada. Ya podés iniciar sesión.', 'success');
 });
 
-// Login
-document.getElementById('loginButton').addEventListener('click', function () {
-    const loginForm = document.getElementById('loginForm');
+document.getElementById('loginButton').addEventListener('click', () => {
     if (!loginForm.reportValidity()) return;
 
-    const storedEmail = localStorage.getItem('email');
-    const storedPassword = localStorage.getItem('password');
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value;
 
-    const loginEmail = document.getElementById('loginEmail').value.trim();
-    const loginPassword = document.getElementById('loginPassword').value.trim();
-
-    if (!loginEmail || !loginPassword) {
-        showNotification('Por favor, completa todos los campos.', 'error');
+    if (demoAccount && email === demoAccount.email && password === demoAccount.password) {
+        showNotification('Acceso de prueba correcto. Volviendo a la tienda…', 'success');
+        window.setTimeout(() => {
+            window.location.href = '/index.html';
+        }, 1200);
         return;
     }
 
-    if (loginEmail === storedEmail && loginPassword === storedPassword) {
-        showNotification('Inicio de sesión exitoso. Redirigiendo...', 'success');
-        setTimeout(() => {
-            window.location.href = "/index.html"; // Redirige a la página principal del PetShop
-        }, 2000); // Retraso de 2 segundos para que se vea el mensaje
-    } else {
-        showNotification('Error: Email o contraseña incorrectos.', 'error');
-    }
+    showNotification(
+        demoAccount
+            ? 'Los datos no coinciden con la cuenta creada en esta visita.'
+            : 'Creá una cuenta de prueba antes de iniciar sesión.',
+        'error'
+    );
 });
 
-// Función para mostrar notificaciones
 function showNotification(message, type) {
-    const notification = document.getElementById('notification');
     notification.textContent = message;
     notification.className = `notification ${type} show`;
-
-    setTimeout(() => {
+    window.clearTimeout(notificationTimer);
+    notificationTimer = window.setTimeout(() => {
         notification.classList.remove('show');
-    }, 3000); // La notificación desaparece después de 3 segundos
+    }, 3500);
 }
