@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <meta name="description" content="Registro e inicio de sesión de Entre Amigos PetShop.">
+    <title>Mi cuenta | Entre Amigos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
- 
-<head>
-	<title>Slide Navbar</title>
- <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-	<div class="container">
+    <main class="container">
         <form id="registerForm">
-            <h2>Registro</h2>
-            <input type="text" id="registerUsername" placeholder="Nombre de Usuario" required>
-            <input type="email" id="registerEmail" placeholder="Email" required>
-            <input type="password" id="registerPassword" placeholder="Contraseña" required>
-            <button type="button" id="registerButton">Registrar</button>
-            <div id="registerMessage" class="message"></div>
+            <h1>Crear cuenta</h1>
+            <label class="sr-only" for="registerUsername">Nombre de usuario</label>
+            <input type="text" id="registerUsername" placeholder="Nombre de usuario" autocomplete="username" required>
+            <label class="sr-only" for="registerEmail">Correo electrónico</label>
+            <input type="email" id="registerEmail" placeholder="Correo electrónico" autocomplete="email" required>
+            <label class="sr-only" for="registerPassword">Contraseña</label>
+            <input type="password" id="registerPassword" placeholder="Contraseña" autocomplete="new-password" required>
+            <button type="submit" id="registerButton">Registrarme</button>
+            <div id="registerMessage" class="message" aria-live="polite"></div>
         </form>
 
         <form id="loginForm">
-            <h2>Login</h2>
-            <input type="email" id="loginEmail" placeholder="Email" required>
-            <input type="password" id="loginPassword" placeholder="Contraseña" required>
-            <button type="button" id="loginButton">Iniciar Sesión</button>
-            <div id="loginMessage" class="message"></div>
+            <h2>Iniciar sesión</h2>
+            <label class="sr-only" for="loginEmail">Correo electrónico</label>
+            <input type="email" id="loginEmail" placeholder="Correo electrónico" autocomplete="username" required>
+            <label class="sr-only" for="loginPassword">Contraseña</label>
+            <input type="password" id="loginPassword" placeholder="Contraseña" autocomplete="current-password" required>
+            <button type="submit" id="loginButton">Ingresar</button>
+            <div id="loginMessage" class="message" aria-live="polite"></div>
         </form>
-    </div>
-    <div id="notification" class="notification"></div>
-
-        
-	</div>
+        <p class="login-note">Esta sección es una demostración y no crea una cuenta real.</p>
+        <a class="back-link" href="/index.html">Volver a la tienda</a>
+    </main>
+    <div id="notification" class="notification" role="status" aria-live="polite"></div>
     <script src="/assets/img/login.js"></script>
-</body>
-</html>
 </body>
 </html>
