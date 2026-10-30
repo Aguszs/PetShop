@@ -156,6 +156,7 @@ const cartTotal = document.getElementById('cart-total');
 const finalizeButton = document.getElementById('finalize-purchase');
 const closeCartButton = document.getElementById('close-cart');
 const viewCartButton = document.getElementById('view-cart');
+const clearCartButton = document.getElementById('clear-cart');
 
 // Renderiza los elementos dentro del carrito
 function renderCartItems() {
@@ -194,6 +195,11 @@ viewCartButton.addEventListener('click', () => {
 
 closeCartButton.addEventListener('click', () => {
     cartModal.classList.add('hidden');
+});
+
+clearCartButton.addEventListener('click', () => {
+    cart = [];
+    updateCart();
 });
 
 
