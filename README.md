@@ -1,40 +1,35 @@
-# PetShop 🐾
+# PetShop
 
-Tienda online de productos para mascotas hecha con **HTML, CSS y JavaScript puro** (sin frameworks). Proyecto práctico del curso de Desarrollador FullStack en Nucba.
+Tienda de práctica para una tienda de productos para mascotas. El catálogo se arma con JavaScript y permite buscar productos, filtrar por categoría y probar un carrito.
 
 **Demo:** https://pet-shop-jet.vercel.app
 
-## Funcionalidades
+## Qué incluye
 
-- **Catálogo dinámico:** los productos se guardan en un array de objetos y se renderizan con JavaScript (manipulación del DOM).
-- **Catálogo:** búsqueda por nombre y filtros por categoría (cuchas, ropa y juguetes).
-- **Carrito de compras:** agregar productos, sumar cantidades, eliminar, total calculado y validación al finalizar la compra.
-- **Registro e inicio de sesión de práctica:** usa `localStorage` en este navegador; no es una cuenta real ni un sistema de autenticación para producción.
-- **Formulario de contacto:** envío de mensajes por email con [EmailJS](https://www.emailjs.com/).
-- **Carrusel** con controles, **menú hamburguesa** y diseño adaptable a celular.
+- Catálogo con cuchas, ropa y juguetes, con búsqueda y filtros.
+- Carrito de demostración con cantidades, eliminación de artículos y cálculo del total. El cierre no procesa pagos.
+- Pantalla de registro e inicio de sesión de prueba. La cuenta solo existe durante la visita actual y no usa un servidor.
+- Formulario de contacto conectado a EmailJS.
+- Carrusel de marcas y navegación adaptada a pantallas chicas.
 
 ## Tecnologías
 
-HTML5 · CSS3 · JavaScript (ES6) · EmailJS · Git/GitHub · Vercel
+HTML · CSS · JavaScript · EmailJS · Vercel
 
-## Estructura
+## Archivos principales
 
-```
-index.html          Página principal (catálogo, carrito, contacto)
-index.login.html    Registro e inicio de sesión
-email.js            Envío del formulario de contacto
-assets/cards.js     Datos de productos y lógica del carrito
-assets/filtrado.js  Filtro por categoría y carrusel
-assets/img/login.js Lógica de registro/login
-assets/*.css        Estilos y media queries
-```
+- `index.html`: catálogo, carrito, contacto y navegación.
+- `assets/cards.js`: productos y lógica del carrito.
+- `assets/filtrado.js`: búsqueda, filtros y carrusel.
+- `assets/style.css` y `assets/mediaq.css`: estilos y adaptación responsive.
+- `index.login.html` y `assets/img/login.js`: pantallas y flujo de acceso de demostración.
+- `email.js`: envío del formulario con EmailJS.
 
-## Cómo correrlo en local
+## Ejecutar en local
 
 1. Cloná el repositorio: `git clone https://github.com/Aguszs/PetShop.git`
-2. Abrí la carpeta con un servidor local (por ejemplo, la extensión *Live Server* de VS Code), ya que las rutas son absolutas (`/assets/...`).
+2. Abrilo con un servidor local, como Live Server. La web usa rutas desde la raíz, por lo que abrir el HTML directamente como archivo puede hacer que no carguen algunos recursos.
 
-## Mejoras pendientes
+## Alcance de la demo
 
-- Guardar el carrito en `localStorage` para que no se pierda al recargar.
-- Reemplazar el login simulado por un backend con base de datos.
+No hay pagos ni autenticación de producción. Para usar el login con cuentas reales o recibir pedidos hace falta conectar un backend. El formulario depende de la configuración de EmailJS del proyecto.
