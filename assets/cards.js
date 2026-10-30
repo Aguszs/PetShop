@@ -222,9 +222,9 @@ function showSuccess(message) {
 // Finalizar compra con validación y mensaje de éxito
 finalizeButton.addEventListener('click', () => {
     if (cart.length === 0) {
-        showError('Por favor, agregar producto');
+        showError('Agregá al menos un producto para continuar.');
     } else {
-        showSuccess('¡Compra realizada con éxito!');
+        showSuccess('Pedido de prueba finalizado. No se realizó ningún cobro.');
         cart = [];
         updateCart();
         cartModal.classList.add('hidden');
